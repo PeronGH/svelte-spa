@@ -1,0 +1,22 @@
+{
+  "name": "svelte-spa",
+  "private": true,
+  "packageManager": "bun@1.4.2",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bun ./index.html",
+    "build": "NODE_ENV=production bun scripts/build.ts",
+    "preview": "bun --production ./dist/index.html",
+    "check": "bun --bun svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@tsconfig/svelte": "^5.0.8",
+    "@types/bun": "^1.4.2",
+    "bun-plugin-tailwind": "^0.1.2",
+    "svelte": "^5.57.0",
+    "svelte-check": "^4.7.6",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.2"
+  }
+}

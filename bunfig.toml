@@ -1,0 +1,2 @@
+[serve.static]
+plugins = ["./scripts/svelte-plugin.ts", "bun-plugin-tailwind"]
