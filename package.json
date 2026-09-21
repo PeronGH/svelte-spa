@@ -8,15 +8,28 @@
     "dev": "bun ./index.html",
     "build": "NODE_ENV=production bun scripts/build.ts",
     "preview": "bun --production ./dist/index.html",
-    "check": "bun --bun svelte-check --tsconfig ./tsconfig.json"
+    "check": "bun --bun svelte-check --tsconfig ./tsconfig.json",
+    "format": "bun --bun prettier --write .",
+    "format:check": "bun --bun prettier --check .",
+    "lint": "bun --bun eslint . --max-warnings 0",
+    "lint:fix": "bun run lint --fix"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@tsconfig/svelte": "^5.0.8",
     "@types/bun": "^1.4.2",
     "bun-plugin-tailwind": "^0.1.2",
+    "eslint": "^10.11.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-svelte": "^3.23.0",
+    "globals": "^17.12.0",
+    "prettier": "^3.9.8",
+    "prettier-plugin-svelte": "^4.1.1",
+    "prettier-plugin-tailwindcss": "^0.8.1",
     "svelte": "^5.57.0",
     "svelte-check": "^4.7.6",
     "tailwindcss": "^4.3.3",
-    "typescript": "~6.0.2"
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.70.0"
   }
 }

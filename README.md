@@ -10,6 +10,9 @@ bun run dev
 Edit `src/App.svelte` to build the app. Use Tailwind utility classes in components; global styles live in `src/app.css`.
 
 ```sh
+bun run format
+bun run format:check
+bun run lint
 bun run check
 bun run build
 bun run preview

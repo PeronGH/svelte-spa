@@ -21,7 +21,11 @@ const svelte: BunPlugin = {
       const code = path.endsWith('.ts')
         ? new Bun.Transpiler({ loader: 'ts' }).transformSync(source)
         : source
-      const { js } = compileModule(code, { filename: path, generate: 'client', dev })
+      const { js } = compileModule(code, {
+        filename: path,
+        generate: 'client',
+        dev,
+      })
       return { contents: js.code, loader: 'js' }
     })
   },
